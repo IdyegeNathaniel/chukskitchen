@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mx-5 md:mx-20 py-10 px-2 md:px-3">
        
         <div className="">
-          <h2 className="font-medium text-3xl text-[#FF7A18] mb-2">Chuks Kitchen</h2>
+          <h2 className="font-medium font-island text-[37px] text-primary mb-2">Chuks Kitchen</h2>
           <p className="w-full md:w-2/3 text-sm text-white leading-6 text-justify">
            Bringing the authentic flavors of Nigerian home cooking to your table, with passion and care.
           </p>

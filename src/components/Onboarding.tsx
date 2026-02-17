@@ -1,8 +1,8 @@
 import { ArrowUp, Truck, Utensils } from "lucide-react";
 import onboard_img from "../assets/images/onbaording.png";
 import Button from "./ui/Button";
-import { useEffect, useState, type ButtonHTMLAttributes, type InputHTMLAttributes } from "react";
-import Footer from "./footer";
+import { useEffect, useState} from "react";
+import Footer from "./Footer";
 
 const Onboarding: React.FC = () => {
 
@@ -58,7 +58,7 @@ const Onboarding: React.FC = () => {
         <div className="flex flex-col items-center justify-between my-6 mx-10">
             {/* heading */}
             <div className="w-full flex justify-between items-center px-4">
-                <a href="#" className="text-[#FF7A18] text-[40px] font-family-sec font-normal">Chuks Kitchen</a>
+                <a href="#" className="text-primary text-[40px] font-island font-normal">Chuks Kitchen</a>
                 <Button variant="outline" size="md" onClick={() => ("/signin")}>Sign In</Button>
             </div>
 
@@ -73,7 +73,7 @@ const Onboarding: React.FC = () => {
                     {
                         services.map((service, index) => (
                             <div key={index} className="flex items-center py-1 gap-[11px]">
-                                <span className="bg-[#FFE1C4] w-10 h-10 p-2.5 rounded-md mr-2 flex items-center justify-center text-[#FF7A18] text-[10px]">{service.icon}</span>
+                                <span className="bg-[#FFE1C4] w-10 h-10 p-2.5 rounded-md mr-2 flex items-center justify-center text-primary text-[10px]">{service.icon}</span>
                                 <p className="text-[16px] font-medium leading-6">{service.text}</p>
                             </div>
                         ))

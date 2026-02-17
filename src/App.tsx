@@ -4,6 +4,9 @@ import NavBar from './components/NavBar'
 import Popular from './components/Popular'
 import Search from './components/ui/Search'
 import { useEffect, useState } from 'react'
+import Special from './components/Special'
+import Footer from './components/Footer'
+import Banner from './components/Banner'
 
 const App = () => {
    const[showButton, setShowButton] = useState<boolean>(false)
@@ -34,6 +37,9 @@ const App = () => {
         <Search />
       </div>
       <Popular />
+      <Special />
+      <Banner />
+      <Footer />
       {showButton && ( <button className="bg-[#1E88E5] p-2 rounded-full fixed bottom-5 right-5 cursor-pointer" onClick={scrollToTop}><ArrowUp className="text-white w-5 h-5" /></button> )}
     </>
   )
