@@ -1,0 +1,8 @@
+export {default as variant1} from "./images/Variant1.png"
+export {default as variant2} from "./images/Variant2.png"
+export {default as variant3} from "./images/Variant3.png"
+export {default as variant4} from "./images/Variant4.png"
+export {default as variant5} from "./images/Variant5.png"
+export {default as variant6} from "./images/Variant6.png"
+export {default as variant7} from "./images/Variant7.png"
+export {default as variant8} from "./images/Variant8.png"
