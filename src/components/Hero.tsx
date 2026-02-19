@@ -1,6 +1,5 @@
 import heroImage from "../assets/images/Welcome.jpg";
 import Button from "./ui/Button";
-import Search from "./ui/Search";
 
 const Hero = () => {
   const backgroundStyle = {
