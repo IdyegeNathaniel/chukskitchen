@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import HomePage from './pages/HomePage'
 import Explore from './pages/Explore';
 import Order from './pages/Order';
+import Onboarding from './components/Onboarding';
 
 const App = () => {
    const[showButton, setShowButton] = useState<boolean>(false)
@@ -29,6 +30,7 @@ const App = () => {
   return (
    <>
         <Routes>
+            <Route path="/" element={<Onboarding />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/myorders" element={<Order />} />

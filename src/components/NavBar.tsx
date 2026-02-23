@@ -6,7 +6,7 @@ import { useState } from "react";
 const NavBar = () => {
   const [menu, setMenu] = useState<boolean>(false);
   return (
-    <nav className="bg-white w-full h-[41px] md:h-[90px] px-12 py-[18px] flex justify-between items-center gap-[45px]">
+    <nav className="bg-white w-full h-[41px] md:h-[90px] px-[19px] md:px-12 py-[18px] flex justify-between items-center gap-[45px]">
       <div className="shrink-0 ">
         <h1 className="text-primary font-island text-[24px] md:text-[41px] font-normal">
           Chuks Kitchen
