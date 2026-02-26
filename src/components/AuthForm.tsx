@@ -38,19 +38,19 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
       <div className="container max-w-[1440px] grid grid-cols-1 lg:grid-cols-2 mx-auto">
         
         {/* LEFT CONTAINER */}
-        <div className="relative h-[300px] md:h-[400px] lg:h-auto">
+        <div className="hidden md:flex relative h-[300px] md:h-[400px] lg:h-auto">
           <img
             src={onboard_img}
             className="w-full h-full object-cover"
             alt="Nigerian food"
           />
 
-          <div className="absolute hidden lg:flex flex-col justify-center items-center inset-0 hover:bg-[#FF7A18B2] group">
-            <div className="max-w-[410px] px-6 text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h2 className="text-4xl xl:text-5xl font-bold mb-3">
+          <div className=" absolute hidden lg:flex flex-col justify-center items-center inset-0 hover:bg-[#FF7A18B2] group">
+            <div className="max-w-[410px] h-[210px] text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h2 className="text-5xl font-bold leading-14 mb-3">
                 Chuks Kitchen
               </h2>
-              <p className="text-xl xl:text-2xl font-medium leading-relaxed">
+              <p className="text-2xl font-medium leading-[34px]">
                 Your journey to delicious, authentic Nigerian meals starts here.
                 Sign up or log in to order your favorites today!
               </p>
