@@ -4,9 +4,9 @@ type ButtonVariant = 'primary' | 'outline'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant,
-  size: 'sm' | 'md' | 'lg',
+  size?: 'sm' | 'md' | 'lg',
   isLoading?: boolean,
-  fullWidth?: boolean
+  fullWidth?: boolean,
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -35,7 +35,6 @@ const Button: React.FC<ButtonProps> = ({
   const widthStyling = fullWidth ? 'w-full' : '';
 
   const buttonStyling = `${variantStyling[variant]} ${sizeStyling[size]} ${widthStyling} ${baseStyling} ${disabled} ${className} ${className}`;
-
 
   return (
     <button disabled={disabled || isLoading} className={buttonStyling} {...rest}>

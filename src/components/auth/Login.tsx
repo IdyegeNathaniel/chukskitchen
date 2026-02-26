@@ -1,8 +1,11 @@
-import React from 'react'
+import AuthForm from "../AuthForm"
 
-const Login = () => {
+
+const Login: React.FC = () => {
   return (
-    <div>Login</div>
+    <div>
+      <AuthForm mode="login" />
+    </div>
   )
 }
 

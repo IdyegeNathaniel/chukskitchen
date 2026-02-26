@@ -1,8 +1,11 @@
-import React from 'react'
+import AuthForm from "../AuthForm"
 
-const Signup = () => {
+
+const Signup: React.FC = () => {
   return (
-    <div>Signup</div>
+    <div>
+      <AuthForm mode="register" />
+    </div>
   )
 }
 
