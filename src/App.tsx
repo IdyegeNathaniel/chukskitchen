@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import HomePage from './pages/HomePage'
@@ -10,6 +10,8 @@ import Signup from './components/auth/Signup';
 
 const App = () => {
    const[showButton, setShowButton] = useState<boolean>(false)
+
+
   
       useEffect(() => {
           const toggleButton = () => {
@@ -32,6 +34,8 @@ const App = () => {
   return (
    <>
         <Routes>
+            <Route path="*" element={<Navigate to="/" replace />} />
+
             <Route path="/" element={<Onboarding />} />
             <Route path="/signin" element={<Login  />} />
             <Route path="/register" element={<Signup />} />
@@ -39,7 +43,7 @@ const App = () => {
             <Route path="/explore" element={<Explore />} />
             <Route path="/myorders" element={<Order />} />
         </Routes>
-    {showButton && ( <button className="bg-[#1E88E5] p-2 rounded-full fixed bottom-5 right-5 cursor-pointer" onClick={scrollToTop}><ArrowUp className="text-white w-5 h-5" /></button> )}
+    {showButton && ( <button className="bg-main p-2 rounded-full fixed bottom-5 right-5 cursor-pointer" onClick={scrollToTop}><ArrowUp className="text-white w-5 h-5" /></button> )}
    </> 
   )
 }

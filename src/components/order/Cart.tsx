@@ -78,7 +78,7 @@ const Cart = () => {
             </div>
             </div>
          ))}
-         <div className="flex items-center p-[3px] gap-2 text-[#1E88E5] font-medium">
+         <div className="flex items-center p-[3px] gap-2 text-main font-medium">
             <Plus className="w-4 h-4" />
             <Link to={"/explore"} className="text-base leading-6 ">Add more items from Chuks Kitchen</Link>
          </div>

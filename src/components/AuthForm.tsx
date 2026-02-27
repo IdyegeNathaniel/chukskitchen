@@ -3,6 +3,7 @@ import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react"
 import onboard_img from "../assets/images/onbaording.png"
 import Footer from "./Footer"
 import Button from "./ui/Button"
+import { useNavigate } from "react-router"
 
 interface AuthFormProps {
   mode: "register" | "login"
@@ -10,6 +11,7 @@ interface AuthFormProps {
 
 const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
   const isRegister = mode === "register"
+  const navigate = useNavigate()
   
   const [formData, setFormData] = useState({
     name: "",
@@ -31,6 +33,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    navigate("/home")
   }
 
   return (
@@ -67,33 +70,13 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
               <h1 className="text-primary font-island text-3xl lg:text-[40px] mb-2">
                 Chuks Kitchen
               </h1>
-              <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+              <h2 className="text-xl lg:text-2xl font-medium text-gray-900">
                 {isRegister ? "Create Your Account" : "Login Your Account"}
               </h2>
             </div>
 
             {/* USER FORM */}
             <form onSubmit={handleSubmit} className="space-y-5">
-              
-              {isRegister && (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                      className="w-full h-12 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      required
-                    />
-                  </div>
-                </div>
-              )}
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -107,7 +90,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@gmail.com"
-                    className="w-full h-12 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full h-12 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main focus:border-transparent"
                     required
                   />
                 </div>
@@ -125,8 +108,8 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+234 800 000 0000"
-                      className="w-full h-12 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="800 000 0000"
+                      className="w-full h-12 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main focus:border-transparent"
                       required
                     />
                   </div>
@@ -145,7 +128,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
                     value={formData.password}
                     onChange={handleChange}
                     placeholder="••••••••"
-                    className="w-full h-12 pl-10 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full h-12 pl-10 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main focus:border-transparent"
                     required
                   />
                   <button
@@ -175,7 +158,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
                       value={formData.confirmPassword}
                       onChange={handleChange}
                       placeholder="••••••••"
-                      className="w-full h-12 pl-10 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full h-12 pl-10 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-main focus:border-transparent"
                       required
                     />
                     <button
@@ -201,28 +184,39 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
                 </div>
               )}
 
+              {/* TnR */}
+               {isRegister && (
+                <div className="flex items-center">
+                <input type="checkbox" id="terms" className="mr-2 accent-main cursor-pointer" />
+                <p className="text-xs text-center text-gray-600">
+                  I agree to the {" "}
+                  <a href="/terms" className="text-main hover:underline">
+                    Terms & conditions
+                  </a>
+                   {" "}and {" "}
+                  <a href="/privacy" className="text-main hover:underline">
+                    Privacy Policy
+                  </a>
+                </p>
+                </div>
+              )}
+
+              {/* SUBMIT */}
+
               <Button variant="primary" size="lg" fullWidth type="submit">
                 {isRegister ? "Create Account" : "Continue"}
               </Button>
 
-              {isRegister && (
-                <p className="text-xs text-center text-gray-600">
-                  By signing up, you agree to our{" "}
-                  <a href="/terms" className="text-primary hover:underline">
-                    Terms of Service
-                  </a>
-                  and
-                  <a href="/privacy" className="text-primary hover:underline">
-                    Privacy Policy
-                  </a>
-                </p>
-              )}
+             
             </form>
 
             <div className="flex items-center justify-center my-6">
               <span className="text-sm text-gray-500">Or continue with</span>
               
             </div>
+
+
+            {/* APPLE AND GOOGLE */}
 
             <div className="space-y-3">
               <button 
@@ -253,19 +247,19 @@ const AuthForm: React.FC<AuthFormProps> = ({ mode }) => {
               </button>
             </div>
 
-            {/* Toggle Login/Register */}
+            {/* LOGIN/REGISTER */}
             <p className="text-center text-sm text-gray-600 mt-6">
               {isRegister ? (
                 <>
                   Already have an account?{" "}
-                  <a href="/login" className="text-primary font-semibold hover:underline">
+                  <a href="/signin" className="text-main font-semibold hover:underline">
                     Sign in
                   </a>
                 </>
               ) : (
                 <>
                   Don't have an account?{" "}
-                  <a href="/register" className="text-[#1C7FF9] font-semibold hover:underline">
+                  <a href="/register" className="text-main font-semibold hover:underline">
                     Create an account
                   </a>
                 </>
