@@ -6,7 +6,6 @@ import {
   variant5,
   variant6,
   variant7,
-  variant8,
   variant9,
   variantx,
   variantxi,
