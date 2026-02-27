@@ -1,6 +1,6 @@
-# **Chuks Kitchen: Authentic Nigerian Food Delivery**
+# **Chuks Kitchen**
 ---
-A  modern, full-featured food delivery application built with React, TypeScript, and Tailwind CSS. Chuks Kitchen brings the rich culinary heritage of Nigeria right to your doorstep with a seamless ordering experience.
+A  modern, well featured food delivery application built with React, TypeScript, and Tailwind CSS. Chuks Kitchen brings the rich culinary heritage of Nigeria right to your doorstep with a seamless ordering experience.
 
 ### **Tech Stack**
 ---
