@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import Button from "./ui/Button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -6,7 +6,7 @@ import { useState } from "react";
 const NavBar = () => {
   const [menu, setMenu] = useState<boolean>(false);
   return (
-    <nav className="bg-white w-full h-[41px] md:h-[90px] px-[19px] md:px-12 py-[18px] flex justify-between items-center gap-[45px]">
+    <nav className="bg-white w-full top-0 sticky px-[19px] md:px-12 py-[18px] flex justify-between items-center gap-[45px] z-10">
       <div className="shrink-0 ">
         <h1 className="text-primary font-island text-[24px] md:text-[41px] font-normal">
           Chuks Kitchen
@@ -28,7 +28,7 @@ const NavBar = () => {
       </div>
       <div className="hidden md:flex">
         <Button variant="primary" size="md">
-          Login
+          <Link to={"/signin"}>Login</Link>
         </Button>
       </div>
 
@@ -62,7 +62,7 @@ const NavBar = () => {
           ))}
           <div className="mt-2">
             <Button variant="primary" size="sm">
-              Login
+              <Link to={"/signin"}>Login</Link>
             </Button>
           </div>
         </div>

@@ -8,7 +8,7 @@ const ExplorePopular = () => {
       <div className="container mx-auto my-5 p-2.5 flex flex-col gap-10">
         <div className="">
           
-        <h2 className="font-bold text-3xl leading-[42px]">Popular</h2>
+        <h2 className="font-bold text-3xl leading-[42px] mb-3">Popular</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
           {explorePopular.map((item) => (
             <div
@@ -42,7 +42,7 @@ const ExplorePopular = () => {
         {/* JOLLOF AND ENTREES */}
 
         <div className="">
-          <h2 className="font-bold text-3xl leading-[42px]">Jollof Rice & Entrees</h2>
+          <h2 className="font-bold text-3xl leading-[42px] mb-3">Jollof Rice & Entrees</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
                     {jollof.map((item) => (
                       <div
@@ -76,7 +76,7 @@ const ExplorePopular = () => {
         {/* SWALLOW AND SOUPS */}
 
         <div className="">
-          <h2 className="font-bold text-3xl leading-[42px]">Swallow & Soups</h2>
+          <h2 className="font-bold text-3xl leading-[42px] mb-3">Swallow & Soups</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
                     {swallow.map((item) => (
                       <div
