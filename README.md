@@ -54,7 +54,7 @@ yarn dev
 ```
 
 * Open on your browser
-  http://localhost:3000
+  http://localhost:5173
   
 ### **Building for Production**
 ---
