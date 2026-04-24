@@ -1,6 +1,7 @@
 
 import { explorePopular, jollof, swallow } from "../../const";
 import { Plus } from "lucide-react";
+import { motion } from "framer-motion"
 
 const ExplorePopular = () => {
   return (
@@ -11,7 +12,10 @@ const ExplorePopular = () => {
         <h2 className="font-bold text-3xl leading-[42px] mb-3">Popular</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
           {explorePopular.map((item) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
               key={item.id}
               className="h-[487px] bg-white flex flex-col gap-6 rounded-lg"
             >
@@ -34,7 +38,7 @@ const ExplorePopular = () => {
                   <Plus className="text-white font-bold w-5 h-5" />
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         </div>
@@ -45,7 +49,10 @@ const ExplorePopular = () => {
           <h2 className="font-bold text-3xl leading-[42px] mb-3">Jollof Rice & Entrees</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
                     {jollof.map((item) => (
-                      <div
+                      <motion.div
+                      initial={{ opacity: 0, y: 100 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 1 }}
                         key={item.id}
                         className="h-[487px] bg-white flex flex-col gap-6 rounded-lg"
                       >
@@ -68,7 +75,7 @@ const ExplorePopular = () => {
                             <Plus className="text-white font-bold w-5 h-5" />
                           </button>
                         </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
         </div>
@@ -79,7 +86,10 @@ const ExplorePopular = () => {
           <h2 className="font-bold text-3xl leading-[42px] mb-3">Swallow & Soups</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
                     {swallow.map((item) => (
-                      <div
+                      <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
                         key={item.id}
                         className="h-[487px] bg-white flex flex-col gap-6 rounded-lg"
                       >
@@ -102,7 +112,7 @@ const ExplorePopular = () => {
                             <Plus className="text-white font-bold w-5 h-5" />
                           </button>
                         </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
         </div>

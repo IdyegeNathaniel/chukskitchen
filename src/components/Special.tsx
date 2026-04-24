@@ -1,6 +1,6 @@
 import { chefItems } from "../const"
 import Button from "./ui/Button"
-
+import { motion } from "framer-motion"
 
 const Special = () => {
   return (
@@ -10,7 +10,13 @@ const Special = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-10">
                     {
                         chefItems.map((item) => (
-                            <div key={item.id} className="h-[487px] bg-white flex flex-col gap-6 rounded-lg">
+                            <motion.div
+                              initial={{ opacity: 0, y: 100 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 1 }}
+                              key={item.id}
+                              className="h-[487px] bg-white flex flex-col gap-6 rounded-lg"
+                            >
                                 <img src={item.image} alt={item.name} className="w-full h-1/2 object-cover rounded-lg" />
                                 <div className="h-[113px] p-[17px] flex flex-col gap-[7px]">
                                     <h3 className="text-[24px] font-semibold">{item.name}</h3>
@@ -20,7 +26,7 @@ const Special = () => {
                                     <p className="text-base leading-6 text-primary font-medium">₦3,500</p>
                                     <Button variant="primary" size="sm">Add to cart</Button>
                                 </div>
-                            </div>
+                            </motion.div>
                          )
                         )
                     }

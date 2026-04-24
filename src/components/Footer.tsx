@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="mx-5 md:mx-20">
         <p className="py-5 text-left text-xs text-neutral-300">
-          © 2020 Lift Media. All rights reserved.
+          © 2026 ChuksKitchen. All rights reserved.
         </p>
       </div>
     </footer>

@@ -18,6 +18,7 @@ const NavBar = () => {
           <NavLink
             key={index}
             to={`/${item}`.toLowerCase().replace(" ", "")}
+            onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}
             className={({ isActive }) =>
               `flex-1 text-base font-medium leading-4  hover:text-primary transition-colors duration-300 ${isActive ? "text-primary" : "text-[#1F2937]"}`
             }
@@ -51,7 +52,7 @@ const NavBar = () => {
           {["Home", "Explore", "My Orders", "Account"].map((item, index) => (
             <NavLink
               key={index}
-              to={`/${item}`.toLowerCase().replace(" ", "")}
+              to={`/${item}`.toLowerCase().replace(" ", "") }
               onClick={() => setMenu(false)}
               className={({ isActive }) =>
                 ` text-xl font-medium leading-4  hover:text-primary transition-colors duration-300 ${isActive ? "text-primary" : "text-[#FFF]"}`
