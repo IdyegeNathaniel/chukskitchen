@@ -48,12 +48,12 @@ const NavBar = () => {
       {/* MOBILE MENU */}
 
       {menu && (
-        <div className="bg-[#1A1A1A] w-full h-screen absolute top-10 right-0 z-50 flex flex-col items-center justify-center gap-6 ">
+        <div className="bg-[#1A1A1A] w-full h-screen absolute top-16 right-0 z-50 flex flex-col items-center justify-center gap-6 ">
           {["Home", "Explore", "My Orders", "Account"].map((item, index) => (
             <NavLink
               key={index}
               to={`/${item}`.toLowerCase().replace(" ", "") }
-              onClick={() => setMenu(false)}
+              onClick={() => {setMenu(false); window.scrollTo({top: 0, behavior: "smooth"})}}
               className={({ isActive }) =>
                 ` text-xl font-medium leading-4  hover:text-primary transition-colors duration-300 ${isActive ? "text-primary" : "text-[#FFF]"}`
               }
