@@ -15,7 +15,7 @@ const ExploreHero = () => {
           <h2 className="max-w-2xl text-3xl md:text-[48px] leading-tight md:leading-[61px] font-bold">
             Chuks Kitchen
           </h2>
-          <p className="text-base md:text-[24px] leading-snug md:leading-[34px] font-medium">
+          <p className="text-base md:text-[24px] leading-snug md:leading-[34px] font-medium text-gray-300">
            Chuks  Kitchen Nigerian Home Cooking 4.8 (1.2k)
           </p>
         </div>
