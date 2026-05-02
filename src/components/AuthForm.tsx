@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react"
+import { Eye, EyeOff, Mail, Lock, Phone } from "lucide-react"
 import onboard_img from "../assets/images/onbaording.png"
 import Footer from "./Footer"
 import Button from "./ui/Button"
